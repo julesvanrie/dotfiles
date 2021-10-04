@@ -49,3 +49,6 @@
 
 [pull]
   rebase = false
+[user]
+	email = jules@vanrie.be
+	name = Jules van Rie

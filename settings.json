@@ -1,7 +1,6 @@
 {
     "editor.detectIndentation": false,
     "editor.formatOnPaste": true,
-    "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -75,5 +74,8 @@
     {
         "rubocop": true
     },
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Quiet Light",
+    "window.zoomLevel": 1
 }

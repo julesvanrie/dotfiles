@@ -52,3 +52,5 @@
 [user]
 	email = jules@vanrie.be
 	name = Jules van Rie
+[init]
+	defaultBranch = main

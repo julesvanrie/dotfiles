@@ -50,5 +50,6 @@
 [pull]
   rebase = false
 
-[init]
-  defaultBranch = master
+[user]
+	email = jules@vanrie.be
+	name = Jules van Rie

@@ -8,7 +8,7 @@ DEFAULT_USER="jules"
 prompt_context(){}
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search pyenv colored-man-pages sudo z)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search colored-man-pages pyenv sudo z)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -69,3 +69,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export BUNDLER_EDITOR=code
+
+# JVR - Customize Agnoster theme
+prompt_dir() {
+  prompt_segment blue $CURRENT_FG '%2~'
+}

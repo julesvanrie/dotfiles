@@ -76,6 +76,6 @@
     },
     "workbench.startupEditor": "newUntitledFile",
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Quiet Light",
-    "window.zoomLevel": 1
+    "workbench.colorTheme": "Visual Studio Dark",
+    "window.zoomLevel": -1
 }

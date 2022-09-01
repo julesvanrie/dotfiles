@@ -26,3 +26,4 @@ gpoms() {
 }
 
 export GOOGLE_APPLICATION_CREDENTIALS=/home/jules/code/julesvanrie/covid-predict/.credentials/covid-predict-333610-88caddd428d4.json
+

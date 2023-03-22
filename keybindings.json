@@ -1,0 +1,15 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+[Backslash]",
+    "command": "workbench.action.terminal.toggleTerminal"
+  }
+{
+  "key": "ctrl+alt+p",
+  "command": "editor.action.insertSnipper",
+  "when": "editorTextFocus",
+  "args": {
+    "langId": "Python",
+    "name": "pp"
+  }}
+]

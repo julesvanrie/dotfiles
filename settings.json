@@ -66,16 +66,28 @@
     "telemetry.enableCrashReporter": false,
     "[python]":
     {
-        "editor.tabSize": 4
+        "editor.tabSize": 4,
+        "editor.formatOnPaste": false,
+        "editor.formatOnSaveMode": "file"
     },
     "python.pythonPath": "~/.pyenv/shims/python",
-    "python.formatting.provider": "yapf",
+    "python.formatting.provider": "black",
     "ruby.lint":
     {
         "rubocop": true
     },
     "workbench.startupEditor": "newUntitledFile",
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Visual Studio Dark",
+    "python.defaultInterpreterPath": "/home/jules/.pyenv/versions/3.10.6/envs/lewagon",
+    "[julia]": {
+        "editor.tabSize": 4,
+    },
+    "terminal.integrated.commandsToSkipShell": [
+      "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "workbench.colorTheme": "Default Light+",
+    "julia.enableTelemetry": true,
+    "debug.console.closeOnEnd": true,
     "window.zoomLevel": -1
 }

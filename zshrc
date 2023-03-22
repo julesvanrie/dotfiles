@@ -8,7 +8,7 @@ DEFAULT_USER="jules"
 prompt_context(){}
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search colored-man-pages pyenv sudo z)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search colored-man-pages sudo direnv)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -26,7 +26,7 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (to manage your Python versions)
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv_prompt_info)]'
+type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
 # Load nvm (to manage your node versions)
 export NVM_DIR="$HOME/.nvm"
@@ -69,8 +69,19 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export BUNDLER_EDITOR=code
+export EDITOR=code
 
 # JVR - Customize Agnoster theme
 prompt_dir() {
   prompt_segment blue $CURRENT_FG '%2~'
 }
+
+# export PYTHONPATH='/home/jules/code/julesvanrie/lecturesprep/04-Decision-Science/01-Project-Setup/lewagon-project'
+# export PYTHONPATH="/home/jules/code/julesvanrie/data-challenges/04-Decision-Science/:/home/jules/code/julesvanrie/aoc/:/home/jules/code/julesvanrie/oopexample/lewagon-project"
+export PYTHONPATH="/home/jules/code/lewagon/data-context-and-setup:$PYTHONPATH"
+
+# Direnv
+eval "$(direnv hook zsh)"
+
+# Set ipdb as the default Python debugger
+export PYTHONBREAKPOINT=ipdb.set_trace

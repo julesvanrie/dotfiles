@@ -9,21 +9,13 @@ alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
 alias stt="echo 'Launching VS Code instead of Sublime Text... (cf ~/.aliases)' && code ."
 
 # JvR: My own aliases
-jpnb() {
-    jupyter notebook $1
-}
+alias jpnb="jupyter notebook"
+alias jn="jupyter notebook"
 
-gstep() {
-    git commit -m  "Commleted $1 step"
-}
+alias gpom="git push origin main"
+alias gpomn="git push origin main"
+alias gpoms="git push origin master"
 
-gpomn() {
-    git push origin main
-}
+alias python=python3
 
-gpoms() {
-    git push origin master
-}
-
-export GOOGLE_APPLICATION_CREDENTIALS=/home/jules/code/julesvanrie/covid-predict/.credentials/covid-predict-333610-88caddd428d4.json
-
+alias wcs=guvcview\ -d\ /dev/video2\ -z

@@ -1,6 +1,7 @@
 // Place your key bindings in this file to override the defaults
 [
   {
+<<<<<<< HEAD
     "key": "ctrl+[Backslash]",
     "command": "workbench.action.terminal.toggleTerminal"
   }
@@ -12,4 +13,15 @@
     "langId": "Python",
     "name": "pp"
   }}
+=======
+    "key": "ctrl+shift+v",
+    "command": "pasteAndIndent.action",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+shift+v",
+    "command": "pasteAndIndent.action",
+    "when": "editorTextFocus && !editorReadonly"
+  }
+>>>>>>> upstream/master
 ]

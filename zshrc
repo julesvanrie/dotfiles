@@ -1,11 +1,11 @@
 ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="jules-agnoster"
 # DEFAULT_USER="jules@Jules-HP-Ubuntu prompt_context(){}"
 DEFAULT_USER="jules"
-prompt_context(){}
+# prompt_context(){}"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
 plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search colored-man-pages sudo direnv)
@@ -26,7 +26,7 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (to manage your Python versions)
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='[🐍 $(pyenv version-name)]'
+type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='🐍 $(pyenv version-name)'
 
 # Load nvm (to manage your node versions)
 export NVM_DIR="$HOME/.nvm"
@@ -71,11 +71,6 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR=code
 export EDITOR=code
 
-# JVR - Customize Agnoster theme
-prompt_dir() {
-  prompt_segment blue $CURRENT_FG '%2~'
-}
-
 # export PYTHONPATH='/home/jules/code/julesvanrie/lecturesprep/04-Decision-Science/01-Project-Setup/lewagon-project'
 # export PYTHONPATH="/home/jules/code/julesvanrie/data-challenges/04-Decision-Science/:/home/jules/code/julesvanrie/aoc/:/home/jules/code/julesvanrie/oopexample/lewagon-project"
 export PYTHONPATH="/home/jules/code/lewagon/data-context-and-setup:$PYTHONPATH"
@@ -85,3 +80,9 @@ eval "$(direnv hook zsh)"
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi

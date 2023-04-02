@@ -78,7 +78,7 @@
     },
     "workbench.startupEditor": "newUntitledFile",
     "security.workspace.trust.untrustedFiles": "open",
-    "python.defaultInterpreterPath": "/home/jules/.pyenv/versions/3.10.6/envs/lewagon",
+    "python.defaultInterpreterPath": "/Users/jules/.pyenv/versions/3.11.2/envs/basic",
     "[julia]": {
         "editor.tabSize": 4,
     },

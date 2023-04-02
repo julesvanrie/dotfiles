@@ -1,19 +1,19 @@
 // Place your key bindings in this file to override the defaults
 [
   {
-<<<<<<< HEAD
     "key": "ctrl+[Backslash]",
     "command": "workbench.action.terminal.toggleTerminal"
-  }
-{
-  "key": "ctrl+alt+p",
-  "command": "editor.action.insertSnipper",
-  "when": "editorTextFocus",
-  "args": {
-    "langId": "Python",
-    "name": "pp"
-  }}
-=======
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "editor.action.insertSnipper",
+    "when": "editorTextFocus",
+    "args": {
+      "langId": "Python",
+      "name": "pp"
+    }
+  },
+  {
     "key": "ctrl+shift+v",
     "command": "pasteAndIndent.action",
     "when": "editorTextFocus && !editorReadonly"
@@ -23,5 +23,4 @@
     "command": "pasteAndIndent.action",
     "when": "editorTextFocus && !editorReadonly"
   }
->>>>>>> upstream/master
 ]

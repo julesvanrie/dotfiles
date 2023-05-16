@@ -19,3 +19,5 @@ alias gpoms="git push origin master"
 alias python=python3
 
 alias wcs=guvcview\ -d\ /dev/video2\ -z
+
+mkcd() { mkdir $1 && cd $1; }

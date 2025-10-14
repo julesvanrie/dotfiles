@@ -58,7 +58,7 @@
   rebase = false
 
 [user]
-	email = 89742340+julesvanrie@users.noreply.github.com
+	email = jules@vanrie.be
 	name = Jules van Rie
 
 [init]

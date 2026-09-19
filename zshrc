@@ -8,7 +8,18 @@ DEFAULT_USER="jules"
 # prompt_context(){}"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search direnv)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search)
+
+# Add the omz ssh-agent plugin for WSL / Linux only (macOS handles this through Keychain in ~/.ssh/config)
+case "$(uname -s)" in
+    Darwin)
+        ;;
+    Linux)
+      plugins+=('ssh-agent')
+        ;;
+esac
+
+echo $plugins
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -26,8 +37,8 @@ export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (to manage your Python versions)
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='🐍 $(pyenv version-name)'
+#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+#type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='🐍 $(pyenv version-name)'
 
 # Load nvm (to manage your node versions)
 export NVM_DIR="$HOME/.nvm"
@@ -83,3 +94,18 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 
 # The next line enables shell command completion for gcloud.
 # if [ -f '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
+
+# export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# Same look and feel without pyenv but classic venv
+
+# Load python environment if it exists
+LW_VENV="$HOME/.lewagon/venvs/lewagon"
+if [ -e $LW_VENV ]; then
+  export VIRTUAL_ENV_DISABLE_PROMPT=1
+  source $LW_VENV/bin/activate
+  RPROMPT+='[🐍 $VIRTUAL_ENV_PROMPT]'
+fi
